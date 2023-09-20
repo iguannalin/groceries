@@ -8,7 +8,7 @@ window.addEventListener("load", () => {
   const container = document.getElementById("container");
   let groceries = {};
   let total = 2150;
-  let w = window.innerWidth - 200;
+  let w = window.innerWidth - 50;
   let h = window.innerHeight - 200;
 
   function getItem() {
@@ -21,7 +21,7 @@ window.addEventListener("load", () => {
       found.push(itemIndex);
       count--;
     }
-    return count == 0 ? null : groceries[gm[itemIndex]];
+    return (total <= 0 || count == 0) ? null : groceries[gm[itemIndex]];
   }
 
   function displayItem(init = false) {
