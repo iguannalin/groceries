@@ -5,8 +5,15 @@ window.addEventListener("load", () => {
     return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
   }
 
-  fetch("https://www.wholefoodsmarket.com/_next/data/cIPmXap6kWkre23RzNwD-/products/all-products.json?featured=on-sale&category=all-products").then((r) => r.json()).then((d) => {
-  // fetch("mockData.json").then((r) => r.json()).then((d) => {
+  // <dialog open>
+  //           <p>Greetings, one and all!</p>
+  //           <form method="dialog">
+  //             <button>OK</button>
+  //           </form>
+  //         </dialog>
+          
+
+  fetch("https://seasons986.pythonanywhere.com/groceries").then((r) => r.json()).then((d) => {
     if (d) console.log(d.pageProps.data.results);
   })
 });
