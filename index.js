@@ -39,7 +39,7 @@ window.addEventListener("load", () => {
       displayItem();
     }
     if (!init) { dialog.style.left = `${getRandomInt(0,w)}px`; dialog.style.top = `${getRandomInt(0,h)}px` }
-    else { dialog.style.left = "44vw"; dialog.style.top = `35vh` }
+    else { dialog.style.left = "5%"; dialog.style.top = "5%"; }
     container.appendChild(dialog);
     total = Math.round((total - item.regularPrice) * 100) / 100;
   }
