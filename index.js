@@ -39,10 +39,9 @@ window.addEventListener("load", () => {
       displayItem();
     }
     if (!init) { dialog.style.left = `${getRandomInt(0,w)}px`; dialog.style.top = `${getRandomInt(0,h)}px` }
-    else { dialog.style.left = `${(w-250)/2}px`; dialog.style.top = `${(h)/2}px` }
+    else { dialog.style.left = "44vw"; dialog.style.top = `35vh` }
     container.appendChild(dialog);
     total = Math.round((total - item.regularPrice) * 100) / 100;
-    console.log({item}, {total});
   }
 
   function startShopping() {
@@ -53,7 +52,6 @@ window.addEventListener("load", () => {
   fetch("https://seasons986.pythonanywhere.com/groceries").then((r) => r.json()).then((d) => {
     if (d) {
       d.pageProps.data.results.forEach((item) => {groceries[item.regularPrice] = item});
-      console.log(groceries);
       startShopping();
     }
   })
