@@ -32,7 +32,7 @@ window.addEventListener("load", () => {
     const p = document.createElement("p");
     const form = document.createElement("form");
     const button = document.createElement("button");
-    if (end) p.innerHTML += `there's nothing else you can buy`;
+    if (end) p.innerHTML += `there's nothing else you can buy<br><br>`;
     else if (!init) p.innerHTML += `you spent $${item.regularPrice} on ${item.name}<br><br>`;
     p.innerHTML += `you have $${total} ${end ? ", good luck." : "to spend"}`;
     dialog.appendChild(p);
