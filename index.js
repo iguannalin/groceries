@@ -6,6 +6,7 @@ window.addEventListener("load", () => {
   }
 
   fetch("https://www.wholefoodsmarket.com/_next/data/cIPmXap6kWkre23RzNwD-/products/all-products.json?featured=on-sale&category=all-products").then((r) => r.json()).then((d) => {
-    if (d) console.log(d.data.results);
+  // fetch("mockData.json").then((r) => r.json()).then((d) => {
+    if (d) console.log(d.pageProps.data.results);
   })
 });
