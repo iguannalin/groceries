@@ -8,7 +8,7 @@ window.addEventListener("load", () => {
   const container = document.getElementById("container");
   let groceries = {};
   let total = 2150;
-  let w = window.innerWidth - 50;
+  let w = window.innerWidth - 250;
   let h = window.innerHeight - 200;
 
   function getItem() {
@@ -34,7 +34,7 @@ window.addEventListener("load", () => {
     const button = document.createElement("button");
     if (end) p.innerHTML += `there's nothing else you can buy<br><br>`;
     else if (!init) p.innerHTML += `you spent $${item.regularPrice} on ${item.name}<br><br>`;
-    p.innerHTML += `you have $${total} ${end ? ", good luck." : "to spend"}`;
+    p.innerHTML += `you have $${total}${end ? ", good luck." : " to spend"}`;
     dialog.appendChild(p);
     if (!init) button.innerHTML = "OK";
     else button.innerHTML = "let's shop";
